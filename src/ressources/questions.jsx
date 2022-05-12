@@ -7,8 +7,8 @@ export const questions = [
             {
                 id: 1,
                 text: "Je plante des éoliennes sur les côtés de la cheminée et je coupe discrètement un fil ou deux pour réduire les émissions de la centrale.",
-                joke: "blabla",
-                reality: "blabla",
+                joke: "t'es nul",
+                reality: "trop top",
             },
             {
                 id: 2,
