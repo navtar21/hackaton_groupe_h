@@ -1,8 +1,13 @@
-// import { useValue } from "../contexts/ContextProvider";
+import { useState, createContext, useContext } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 
+import { questions } from "../ressources/questions";
+
 export default function Home() {
-    // const { val, setVal } = useValue();
+    const [step, setStep] = useState(0);
+    const nextStep = () => {
+        setStep(step + 1);
+    };
 
     return (
         <section id="Home">
@@ -20,22 +25,34 @@ export default function Home() {
                 ></Player>
             </nav>
             <article>
-                <div id="question_container">
-                    <button>question précédente</button>
-                    <h1>QUESTION 1</h1>
-                    <button>question suivante</button>
-                </div>
-                <p>texte de la question</p>
-                <div id="question_container">
-                    <div id="button_container">
-                        <p>bla bla</p>
-                        <button>BON</button>
-                    </div>
-                    <div>
-                        <p>bla bla</p>
-                        <button>PAS BON</button>
-                    </div>
-                </div>
+                {questions.length !== step ? (
+                    <>
+                        <div id="question_container">
+                            <button>question précédente</button>
+                            <h1>{questions[step].title}</h1>
+                            <button>question suivante</button>
+                        </div>
+                        <p>{questions[step].text}</p>
+                        {/* <h1>{currentScene.title}</h1> */}
+
+                        <button></button>
+
+                        <div id="question_container">
+                            <div id="button_container">
+                                <p>bla bla</p>
+                                <button onClick={nextStep}>BON</button>
+                            </div>
+                            <div>
+                                <p>bla bla</p>
+                                <button>PAS BON</button>
+                            </div>
+                        </div>
+                    </>
+                ) : (
+                    <>
+                        <p>c'est la fin</p>
+                    </>
+                )}
             </article>
         </section>
     );
