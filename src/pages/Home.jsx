@@ -1,6 +1,7 @@
 // import { useValue } from "../contexts/ContextProvider";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Button from "../components/Button";
+import Modal from "../components/Modal";
 
 export default function Home() {
   // const { val, setVal } = useValue();
@@ -35,6 +36,9 @@ export default function Home() {
           <div>
             <p>bla bla</p>
             <Button content="BON" link="/settings" />
+          </div>
+          <div className="App">
+            <Modal />
           </div>
         </div>
       </article>
