@@ -13,7 +13,7 @@ export default function Home() {
                     src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
                     style={{
                         height: "40vh",
-                        width: "10vw",
+                        width: "30vw",
                         position: "relative",
                         top: "-15vh",
                     }}

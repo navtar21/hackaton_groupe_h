@@ -45,8 +45,10 @@ Recommencer
 
 Tous les fichiers SCSS doivent être dans le dossier src/css.
 
-Quand on crée une nouvelle page "Page".jsx, on crée également un fichier "\_Page".scss dans le dossier src/css.
+Quand on crée une nouvelle page "Page".jsx, on crée également un fichier "\_Page".scss dans le dossier src/css. Pour un nouveau composant on crée "\_Composant.scss".
 
-Dans ce fichier "\_Page".scss, englober tout le CSS dans une id #Page {}.
+Dans le fichier "\_Page".scss, englober tout le CSS dans une id #Page {}.
+
+Dans le fichier "\_Composant.scss", englober le CSS dans une classe .Composant {}.
 
 Dans "App.scss" ajouter une ligne en haut du fichier au format @use "Page";
