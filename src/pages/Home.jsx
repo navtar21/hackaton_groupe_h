@@ -1,6 +1,7 @@
 // import { useValue } from "../contexts/ContextProvider";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Button from "../components/Button";
+import { ProgressBar } from "../components/ProgressBar";
 
 export default function Home() {
   // const { val, setVal } = useValue();
@@ -8,7 +9,10 @@ export default function Home() {
   return (
     <section id="Home">
       <nav>
-        <Player
+      <aside>
+        <ProgressBar />
+      </aside>
+        {/* <Player
           autoplay
           loop
           src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
@@ -18,7 +22,7 @@ export default function Home() {
             position: "relative",
             top: "-15vh",
           }}
-        ></Player>
+        ></Player> */}
       </nav>
       <article>
         <div id="question_container">
