@@ -1,8 +1,12 @@
+// PAGES
 @use "Home";
 @use "About";
-@use "Progress";
+@use "Page404";
+
+// COMPONENTS
 @use "Button";
-@use "Jokes";
+@use "Modal";
+@use "ProgressBar";
 
 body {
     margin: 0;
