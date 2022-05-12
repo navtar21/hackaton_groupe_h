@@ -12,69 +12,79 @@ export default function Home() {
     const nextStep = () => {
         setStep(step + 1);
     };
+    const backStep = () => {
+        setStep(step - 1);
+    };
 
-    const [points, setPoints] = useState(50);
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
-    //
+    const [show, setShow] = useState(false);
+    const [show1, setShow1] = useState(false);
 
     return (
         <section id="Home">
             <nav>
-                <Button content="Question Précédente" link="/settings" />
-                <Player
-                    autoplay
-                    loop
-                    src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
-                    style={{
-                        height: "40vh",
-                        width: "30vw",
-                        position: "relative",
-                        top: "-15vh",
-                    }}
-                ></Player>
-                <Button content="Question Suivante" link="/settings" />
+                <Button content="Question Précédente" callback={backStep} />
+                <Button content="Question Suivante" callback={nextStep} />
             </nav>
+            <Player
+                autoplay
+                loop
+                src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
+                style={{
+                    height: "20vh",
+                    width: "auto",
+                }}
+            ></Player>
             <aside>
-                <ProgressBar />
+                <ProgressBar props={step} />
             </aside>
+
             <article>
                 {questions.length !== step ? (
                     <>
-                        <div id="question_container">
-                            <h1>{questions[step].title}</h1>
-                            <p>{questions[step].text}</p>
-                            <div id="button_container">
-                                <div className="button-bien">
-                                    <p>bla bla</p>
-                                    <Button
-                                        content="PAS BON"
-                                        link="/settings"
-                                        onClick={nextStep}
+                        {/* <div id="question_container"> */}
+                        <h1>{questions[step].title}</h1>
+                        <p>{questions[step].text}</p>
+                        <div id="button_container">
+                            <div className="button-bien">
+                                <p>{questions[step].choice[0].text}</p>
+                                <Button
+                                    content="Bonne réponse"
+                                    callback={() => setShow(true)}
+                                ></Button>
+                                {show && (
+                                    <Modal
+                                        step={step}
+                                        setStep={setStep}
+                                        show={show}
+                                        setShow={setShow}
+                                        choice="correct"
                                     />
-                                </div>
-                                <div className="button-pas-bien">
-                                    <p>bla bla</p>
-                                    <Button
-                                        content="BON"
-                                        link="/settings"
-                                        onClick={nextStep}
-                                    />
-                                </div>
+                                )}
                             </div>
+                            <div className="button-pas-bien">
+                                <p>{questions[step].choice[1].text}</p>
+                                <Button
+                                    content="Mauvaise réponse"
+                                    callback={() => setShow1(true)}
+                                />
+                                <Modal
+                                    step={step}
+                                    setStep={setStep}
+                                    show={show1}
+                                    setShow={setShow1}
+                                    choice="wrong"
+                                />
+                            </div>
+                            {/* </div> */}
                         </div>
-                        <Modal />
                     </>
                 ) : (
                     <>
-                        <p>c'est la fin</p>
+                        {points >= 50 ? (
+                            <p>Bravo vous avez bien aidé la planète</p>
+                        ) : (
+                            <p>Vous n'êtes qu'un vilain tordu</p>
+                        )}
                     </>
                 )}
             </article>

@@ -1,47 +1,48 @@
 import { useState } from "react";
+import { questions } from "../ressources/questions";
 
-export default function Modal() {
-    const [modal, setModal] = useState(false);
-    //on cree un state sur false
-    const toggleModal = () => {
-        setModal(!modal);
+export default function Modal({ step, setStep, show, setShow, choice }) {
+    const change = () => {
+        setShow(!show);
+        setStep(step + 1);
     };
-    //On lui cree une fonction toggle qu'on relira au bouton pour l'apparition du Modal
+
+    let action = 0;
+    if (choice === "wrong") {
+        action = 1;
+    }
 
     return (
         <div className="modal-container">
-            <button onClick={toggleModal} className="btn-modal">
-                OPEN
-            </button>
-            {/* lui donner une condition ! modal "true" alors apparition du madal */}
-            {modal && (
+            {show && action === 0 ? (
                 <div className="overlay">
                     <div className="modal">
                         <div className="modal-content">
                             <h2>Hello Modal</h2>
-                            <p>
-                                C’est une ère de conflits qui vous attend sur
-                                Ivalice. Le petit royaume de Dalmasca est en
-                                ruines après sa conquête par l’empire d’Arcadia,
-                                et son avenir est incertain. La princesse Ashe,
-                                la seule et unique prétendante au trône, se
-                                dévoue corps et âme à la cause de la résistance.
-                                Vaan, un jeune orphelin de guerre, rêve de voler
-                                sans contraintes à travers les nuages.
-                                Joignez-vous à ces alliés improbables et à leurs
-                                compagnons alors qu’ils entament une quête
-                                héroïque pour délivrer leur pays de
-                                l’envahisseur et rétablir la royauté déchue.
-                            </p>
-                            <button
-                                onClick={toggleModal}
-                                className="close-modal"
-                            >
+                            <p>text</p>
+                            <button onClick={change} className="close-modal">
                                 CLOSE
                             </button>
                         </div>
                     </div>
                 </div>
+            ) : (
+                show && (
+                    <div className="overlay">
+                        <div className="modal">
+                            <div className="modal-content">
+                                <h2>zeoirfjhriofjrhio</h2>
+                                <p>text</p>
+                                <button
+                                    onClick={change}
+                                    className="close-modal"
+                                >
+                                    CLOSE
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )
             )}
         </div>
     );
