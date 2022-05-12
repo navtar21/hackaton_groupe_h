@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import { questions } from "../ressources/questions";
 
 export default function Home() {
-
     const [step, setStep] = useState(0);
     const nextStep = () => {
         setStep(step + 1);
@@ -58,3 +57,4 @@ export default function Home() {
             </article>
         </section>
     );
+}
