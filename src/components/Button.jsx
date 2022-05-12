@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function StartButton({ link, content }) {
+export default function Button({ link, content }) {
     return (
         <Link className="button-link" to={link}>
             <button className="start-button" type="button">
