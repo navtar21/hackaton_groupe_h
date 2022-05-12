@@ -1,9 +1,13 @@
 import { useState, createContext, useContext } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Button from "../components/Button";
+ 
+import Modal from "../components/Modal";
+
 import { ProgressBar } from "../components/ProgressBar";
 
 import { questions } from "../ressources/questions";
+
 
 export default function Home() {
     const [step, setStep] = useState(0);
@@ -56,6 +60,31 @@ export default function Home() {
           }}
         ></Player>
       </nav>
+
+      <article>
+        <div id="question_container">
+          <Button content="Question Précédente" link="/settings" />
+          <h1>QUESTION 1</h1>
+          <Button content="Question Suivante" link="/settings" />
+        </div>
+        <p>texte de la question</p>
+        <div id="question_container">
+          <div id="button_container">
+            <p>bla bla</p>
+            <Button content="PAS BON" link="/settings" />
+          </div>
+          <div>
+            <p>bla bla</p>
+            <Button content="BON" link="/settings" />
+          </div>
+          <div className="App">
+            <Modal />
+          </div>
+        </div>
+      </article>
+    </section>
+  );
+
                         <div id="question_container">
                             <div id="button_container">
                                 <p>bla bla</p>
