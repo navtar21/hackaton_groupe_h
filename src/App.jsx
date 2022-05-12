@@ -23,5 +23,3 @@ export default function App() {
     </ContextProvider>
     );
 }
-
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
