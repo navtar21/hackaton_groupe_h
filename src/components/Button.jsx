@@ -1,13 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
-export default function StartButton({ link, content }) {
+export default function Button({ content, callback }) {
     return (
-        <Link className="button-link" to={link}>
-            <button className="start-button" type="button">
-                <i className="button-arrow" />
-                <h2 className="start">{content}</h2>
-            </button>
-        </Link>
+        <div className="button-container">
+            <button onClick={callback}>{content}</button>
+        </div>
     );
 }

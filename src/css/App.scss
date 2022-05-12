@@ -1,4 +1,14 @@
+// PAGES
 @use "Home";
+@use "About";
+@use "Page404";
+@use "Start";
+
+// COMPONENTS
+@use "Button";
+@use "Modal";
+@use "ProgressBar";
+@use "Video";
 
 body {
     margin: 0;

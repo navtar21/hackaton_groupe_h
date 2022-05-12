@@ -1,0 +1,17 @@
+    .progress-bar {
+    position: relative;
+    width: 70vw;
+    height: 20px;
+    background-color: aqua;
+
+    .progress-point {
+        background-color:red;
+        position: absolute;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
