@@ -1,6 +1,8 @@
 export const questions = [
     {
         id: 1,
+        animation:
+            "https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json",
         title: "Question 01",
         text: "Vous êtes devant la centrale nucléaire de Boboland. Que faites-vous ?",
         choice: [

@@ -37,7 +37,7 @@ export default function Home() {
             <Player
                 autoplay
                 loop
-                src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
+                src={questions[step].animation}
                 style={{
                     height: "20vh",
                     width: "auto",
