@@ -13,6 +13,18 @@ export default function Home() {
         setStep(step + 1);
     };
 
+    const [points, setPoints] = useState(50);
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+    //
+
     return (
         <section id="Home">
             <nav>
