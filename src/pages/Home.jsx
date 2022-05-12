@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import Button from "../components/Button";
@@ -10,7 +11,9 @@ import { questions } from "../ressources/questions";
 export default function Home() {
     const [step, setStep] = useState(0);
     const nextStep = () => {
-        setStep(step + 1);
+        if (questions.length !== step + 1) {
+            setStep(step + 1);
+        }
     };
     const backStep = () => {
         setStep(step - 1);
@@ -30,8 +33,17 @@ export default function Home() {
     return (
         <section id="Home">
             <nav>
-                <Button content="Question Précédente" callback={backStep} />
-                <Button content="Question Suivante" callback={nextStep} />
+                {step !== 0 && (
+                    <Button content="Question Précédente" callback={backStep} />
+                )}
+
+                {questions.length !== step + 1 ? (
+                    <Button content="Question Suivante" callback={nextStep} />
+                ) : (
+                    <Link to="/">
+                        <Button content="Retour à l'accueil" />
+                    </Link>
+                )}
             </nav>
 
             <Player
@@ -51,7 +63,9 @@ export default function Home() {
             <article>
                 {questions.length !== step ? (
                     <>
-                        <h1>{questions[step].title}</h1>
+                        <h1>
+                            {questions[step].title} / {questions.length}
+                        </h1>
 
                         <p>{questions[step].text}</p>
 
