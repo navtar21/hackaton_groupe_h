@@ -8,6 +8,7 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@lottiefiles/react-lottie-player": "^3.4.6",
         "axios": "^0.27.2",
         "cors": "^2.8.5",
         "dotenv": "^16.0.1",
