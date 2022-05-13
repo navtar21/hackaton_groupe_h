@@ -2,9 +2,9 @@ export const questions = [
     {
         id: 1,
         animation:
-            "https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json",
+            "https://assets10.lottiefiles.com/packages/lf20_OV6Wqv.json",
         title: "Question 01",
-        text: "Vous êtes devant la centrale nucléaire de Boboland. Que faites-vous ?",
+        text: "Tu es devant la centrale nucléaire de Boboland. Que fais-tu ?",
         choice: [
             {
                 id: 1,
@@ -14,7 +14,7 @@ export const questions = [
             },
             {
                 id: 2,
-                text: "Je mets un gros bouchon sur la cheminée qui doit sûrement faire rien qu’à polluer",
+                text: "Je mets un chapeau sur la cheminée comme sur le î de Benoît pour couvrir le poteau rose",
                 joke: "La centrale explose ainsi que les 5 villes alentour. Tous les survivants radioactifs vous poursuivent.",
                 reality:
                     "À cause de l'arrêt de la production de la centrale, le recours au charbon comme source d'énergie a explosé. CO2 dans l'air + 150 MT.",
@@ -23,15 +23,16 @@ export const questions = [
     },
     {
         id: 2,
+        animation:" https://assets7.lottiefiles.com/packages/lf20_NEA1lt.json",
         title: "Question 02",
-        text: "Vous devez faire Paris-Prades pour aller voter. Comment s'y prendre?",
+        text: "Je dois faire Paris-Prades pour aller voter. Comment m'y prendre?",
         choice: [
             {
                 id: 1,
                 text: "Je fais une procuration",
                 joke: "Pour m’oCUper moi même de ma femme",
                 reality:
-                    "Madame sera contente mais comme je suis un gros obsédé ce sera surtout moi! J'éviterai de devoir payer une grosse pension alimentaire",
+                    "J'ai déjà un procès pour viol un divorce ne va pas m'arranger ",
             },
             {
                 id: 2,
@@ -44,8 +45,9 @@ export const questions = [
     },
     {
         id: 3,
+        animation:"https://assets6.lottiefiles.com/private_files/lf30_2eWwRI.json",
         title: "Question 03",
-        text: `Vous avez envie de faire un "prout". Qu’est ce que vous faites ?`,
+        text: "Vous avez envie de faire un prout. Qu’est ce que vous faites ?",
         choice: [
             {
                 id: 1,
@@ -57,10 +59,33 @@ export const questions = [
             {
                 id: 2,
                 text: "J’implose littéralement dans la souffrance.",
-                joke: "Je mets mes intestins en PLS jusqu’au prochain prout incontrôlable qui a muté en bombe à retardement et je ruine mon calbar",
+                joke: " Prendre enfin les mesures qui s'imposent pour éradiquer définitivement les pourriels (spams Internet) dont la fermentation dégage des gaz virtuels à effet de serre.",
                 reality:
-                    "Lorsque vous vous retenez de péter, vous gardez en vous un mélange bien savoureux ! En effet, il y a de tout dans ce cocktail : méthane, hydrogène, oxygène (que les intestins parviennent tant bien que mal à éliminer sans faire péter), mais aussi de l’azote, du sulfate d’hydrogène et bien d’autres gaz volatils. Et pour ceux là, c’est plus problématique ! Derrière ces noms barbares ce cachent les responsables de vos flatulences incessantes…",
+                    "Lorsque vous vous retenez, vous gardez en vous un mélange bien savoureux ! En effet, il y a de tout dans ce cocktail : méthane, hydrogène, oxygène, mais aussi de l’azote, du sulfate d’hydrogène et bien d’autres gaz volatils. Et pour ceux là, c’est plus problématique ! Derrière ces noms barbares ce cachent les responsables de vos flatulences incessantes…",
             },
         ],
     },
+
+{
+    id: 4,
+    animation:"https://assets7.lottiefiles.com/private_files/lf30_lDqjSK.json",
+    title: "Question 04",
+    text: "Je souhaite remporter le record du monde d'aubergine. Comment m'y prendre?",
+    choice: [
+        {
+            id: 1,
+            text: "J'utilise mon purin d'orties fait maison",
+            joke: "Les lépreux aussi sont biodégradables ! C'est parfait pour enrichir mon compost",
+            reality:
+                "Riche en azote, cette macération d'orties est un engrais efficace qui stimule la croissance des plantes et un fortifiant que l'on pulvérise sur les plantes pour les rendre plus résistantes aux maladies et aux parasites. C’est un excellent insecticide de contact contre les pucerons et les acariens.",
+        },
+        {
+            id: 2,
+            text: "J'appelle mon meilleur ami chimiste pour pulvériser mon record",
+            joke: "Mangeons chimio mangeons Bio",
+            reality:
+                "La première conséquence de l'utilisation des engrais chimiques révèle que certains exposent à une teneur élevée en acide comme l’acide sulfurique et l’acide chlorhydrique. Celle-ci entraînant la destruction de la bactérie fixatrice d’azote, qui aide à fournir l’azote à une plante en croissance. La conséquence de  cette utilisation dans le jardin est l’appauvrissement du sol. Problématique plus directe : sa nocivité. Certains éléments s’avèrent très polluants et se retrouvent directement dans les cours d’eau. Les substances non assimilées par les plantes sont emportées par les pluies… celle-ci se déversant directement dans notre environnement. Ces engrais en raison de leurs produits chimiques nocifs ont un impact tant écologique que sur notre corps.",
+        },
+    ],
+}
 ];
