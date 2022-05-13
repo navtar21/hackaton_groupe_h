@@ -1,7 +1,12 @@
+$jaune: #ffb800;
+$bleu: #003238;
+$vert: #6eeb83;
+$jaune2: #e4ff1a;
+
 .button-container {
     button {
-        background: #eb910a;
-        color: white;
+        background-color: $jaune2;
+        color: $bleu;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
         border-radius: 25px;
         font-size: 18px;

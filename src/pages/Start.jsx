@@ -4,14 +4,18 @@ import Button from "../components/Button";
 export default function Start() {
     return (
         <section id="Start">
-            <h1>MENACES ECOLOGIQUES</h1>
-            <h2>Eco 🌍 QUIZZ</h2>
-            <Link to="/home">
-                <Button content="TRASH" />
-            </Link>
-            <Link to="/petite_maison">
-                <Button content="SOFT" />
-            </Link>
+            <article>
+                <h1>MENACES ECOLOGIQUES</h1>
+                <h2>Eco 🌍 QUIZZ</h2>
+                <div>
+                    <Link to="/home">
+                        <Button content="TRASH" />
+                    </Link>
+                    <Link to="/petite_maison">
+                        <Button content="SOFT" />
+                    </Link>
+                </div>
+            </article>
         </section>
     );
 }

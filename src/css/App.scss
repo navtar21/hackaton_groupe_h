@@ -1,8 +1,14 @@
+$jaune: #ffb800;
+$bleu: #003238;
+$vert: #6eeb83;
+$jaune2: #e4ff1a;
+
 // PAGES
 @use "Home";
 @use "About";
 @use "Page404";
 @use "Start";
+@use "Petite_maison";
 
 // COMPONENTS
 @use "Button";
@@ -13,9 +19,16 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    font-family: "Mali";
+    background-color: $vert;
 }
 
 #root {
+    h1,
+    h2 {
+        font-family: "Patrick Hand", cursive;
+    }
+
     section {
         width: 80%;
         margin: auto;
