@@ -9,8 +9,10 @@ $jaune2: #e4ff1a;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    height: 100vh;
 
     article {
+        overflow: hidden;
         h1 {
             position: relative;
             text-align: center;
@@ -37,7 +39,7 @@ $jaune2: #e4ff1a;
         top: 0;
         left: 50%;
         transform: translate(-50%);
-        font-size: 5em;
+        font-size: 3em;
         width: 100%;
         text-transform: uppercase;
         color: $bleu;
