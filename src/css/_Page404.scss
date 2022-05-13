@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700);
 
+$jaune: #ffb800;
+$bleu: #003238;
+$vert: #6eeb83;
+$jaune2: #e4ff1a;
+
 #Page404 {
     display: flex;
     justify-content: center;
@@ -35,7 +40,7 @@
         font-size: 5em;
         width: 100%;
         text-transform: uppercase;
-        color: #6eeb83;
+        color: $bleu;
         opacity: 0.4;
         z-index: -50;
         margin: 0;
