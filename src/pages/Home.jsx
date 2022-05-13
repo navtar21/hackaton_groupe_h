@@ -24,10 +24,10 @@ export default function Home() {
 
     const [points, setPoints] = useState(50);
     const countPointMore = () => {
-        setPoints(points + 5);
+        setPoints(points + 10);
     };
     const countPointLess = () => {
-        setPoints(points - 5);
+        setPoints(points - 10);
     };
 
     return (
@@ -56,7 +56,7 @@ export default function Home() {
                 }}
             ></Player>
 
-            <aside>
+         <aside>
                 <ProgressBar points={points} />
             </aside>
 
