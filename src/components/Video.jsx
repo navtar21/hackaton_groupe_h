@@ -10,7 +10,7 @@ function Video() {
         <div>
             <ReactPlayer
                 url={externalSource}
-                controls={false}
+                controls
                 playing
                 muted
                 onEnded={videoEnded}

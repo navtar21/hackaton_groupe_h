@@ -25,6 +25,7 @@ export default function About() {
                             width: "auto",
                         }}
                     ></Player>
+                    <div>Bravoï la planète vous aime.</div>
                 </>
             ) : (
                 <>
@@ -38,6 +39,10 @@ export default function About() {
                             width: "auto",
                         }}
                     ></Player>
+                    <div>
+                        Vous n'êtes rien qu'un gros dégoûtant. On vous
+                        regrettera pas.
+                    </div>
                 </>
             )}
         </section>
