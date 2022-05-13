@@ -1,14 +1,14 @@
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Page404() {
     const navigate = useNavigate();
 
-    //   useEffect(() => {
-    //     setTimeout(() => {
-    //       navigate("/");
-    //     }, 3000);
-    //   }, []);
+    useEffect(() => {
+        setTimeout(() => {
+            navigate("/");
+        }, 5000);
+    }, []);
 
     return (
         <section id="Page404">
