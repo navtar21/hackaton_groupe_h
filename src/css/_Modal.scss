@@ -4,6 +4,8 @@ $vert: #6eeb83;
 $jaune2: #e4ff1a;
 
 .modal-container {
+    height: 1vh;
+
     .overlay {
         position: absolute;
         top: 0;
@@ -11,20 +13,16 @@ $jaune2: #e4ff1a;
         right: 0;
         bottom: 0;
         background: rgba(49, 49, 49, 0.8);
+        height: 120vh;
 
         .modal {
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: #f1f1f1;
             padding: 14px 28px;
             border-radius: 3px;
-            width: 100vw;
-            height: 50vh;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+            width: 80vw;
             background-color: $jaune;
 
             .modal-content {
@@ -32,7 +30,6 @@ $jaune2: #e4ff1a;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                height: 100%;
 
                 button {
                     background-color: $vert;
@@ -40,7 +37,6 @@ $jaune2: #e4ff1a;
                 }
 
                 p {
-                    font-size: 1.2em;
                     padding: 10px;
                 }
             }

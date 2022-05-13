@@ -14,5 +14,9 @@ $jaune2: #e4ff1a;
         border: 0;
         width: 20vh;
         margin: 6px;
+
+        @media screen and (min-width: 900px) {
+            height: 20vh;
+        }
     }
 }

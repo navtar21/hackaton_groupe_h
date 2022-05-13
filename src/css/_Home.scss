@@ -10,6 +10,10 @@ $jaune2: #e4ff1a;
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @media screen and (min-width: 900px) {
+            justify-content: space-between;
+        }
     }
     // Player Lottie : height 20vh
 
@@ -26,6 +30,10 @@ $jaune2: #e4ff1a;
         border: 2px solid $bleu;
         margin: 30px auto;
         background-color: $bleu;
+
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
     }
 
     article {
@@ -38,18 +46,40 @@ $jaune2: #e4ff1a;
         h1 {
             width: 100%;
             text-align: center;
+
+            @media screen and (min-width: 900px) {
+                justify-content: space-between;
+            }
         }
 
         .texte-question {
             text-align: center;
             position: relative;
-            width: 100vw;
+            width: 95vw;
             border: 3px solid $bleu;
+
+            @media screen and (min-width: 900px) {
+                border: none;
+                font-size: 2em;
+            }
         }
 
         #button_container {
             width: 100%;
             text-align: center;
+
+            @media screen and (min-width: 900px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-bien,
+            .button-pas-bien {
+                @media screen and (min-width: 900px) {
+                    width: 49%;
+                }
+            }
 
             button {
                 width: 90%;

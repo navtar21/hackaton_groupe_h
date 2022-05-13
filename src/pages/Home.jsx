@@ -24,10 +24,10 @@ export default function Home() {
 
     const [points, setPoints] = useState(50);
     const countPointMore = () => {
-        setPoints(points + 10);
+        setPoints(points + 5);
     };
     const countPointLess = () => {
-        setPoints(points - 10);
+        setPoints(points - 5);
     };
 
     return (
@@ -40,8 +40,8 @@ export default function Home() {
                 {questions.length !== step + 1 ? (
                     <Button content="Question Suivante" callback={nextStep} />
                 ) : (
-                    <Link to="/">
-                        <Button content="Retour à l'accueil" />
+                    <Link to="/about" state={{ points: points }}>
+                        <Button content="Vers la fin (avant 3 ans)" />
                     </Link>
                 )}
             </nav>
