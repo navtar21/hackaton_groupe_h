@@ -1,17 +1,63 @@
-    .progress-bar {
+.progress-bar-container {
+    display: flex;
     position: relative;
-    width: 70vw;
-    height: 20px;
-    background-color: aqua;
+    width: 96%;
+
+    @media screen and (min-width: 900px) {
+        height: 5vh;
+        margin: 10% 0;
+    }
+
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .progress-left {
+        padding-right: 10px;
+    }
+
+    .progress-right {
+        padding-left: 10px;
+    }
 
     .progress-point {
-        background-color:red;
         position: absolute;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        img {
+            width: 12vw;
+            border-radius: 50%;
+            border: 2px solid black;
+
+            @media screen and (min-width: 900px) {
+                width: 12vw;
+            }
+        }
+    }
+
+    #image1 {
+        width: 25%;
+        height: auto;
+    }
+    #image2 {
+        width: 20%;
+        height: auto;
+    }
+    #image3 {
+        width: 15%;
+        height: auto;
+    }
+    #image4 {
+        width: 10%;
+        height: auto;
+    }
+    #image5 {
+        width: 5%;
+        height: auto;
     }
 }

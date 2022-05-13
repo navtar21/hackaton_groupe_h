@@ -1,26 +1,36 @@
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Page404() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-//   useEffect(() => {
-//     setTimeout(() => {
-//       navigate("/");
-//     }, 3000);
-//   }, []);
+    useEffect(() => {
+        setTimeout(() => {
+            navigate("/");
+        }, 5000);
+    }, []);
 
-  return (
-    <div id ="Page404">
-
-      <header>
-        <h1 className="glitch" data-text="404">
-          404
-        </h1>
-        <h2>Ici tu ne peux rien faire pour la Planet ?</h2>
-      </header>
-    </div>
-  );
+    return (
+        <section id="Page404">
+            <article>
+                <h1 className="glitch" data-text="404">
+                    4<span>0</span>4
+                    <img src="./src/assets/terry.png" alt="Terry le BOGOSS" />
+                </h1>
+            </article>
+            <p>
+                Ici tu ne peux rien faire pour la Planète même si tu connais
+                Terry.
+                <br />
+                Ici tu ne peux rien faire pour la Planète même si tu connais
+                Terry.
+                <br />
+                Ici tu ne peux rien faire pour la Planète même si tu connais
+                Terry.
+                <br />
+            </p>
+        </section>
+    );
 }
 
 export default Page404;

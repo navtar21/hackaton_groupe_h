@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 import Button from "../components/Button";
@@ -10,7 +11,9 @@ import { questions } from "../ressources/questions";
 export default function Home() {
     const [step, setStep] = useState(0);
     const nextStep = () => {
-        setStep(step + 1);
+        if (questions.length !== step + 1) {
+            setStep(step + 1);
+        }
     };
     const backStep = () => {
         setStep(step - 1);
@@ -30,14 +33,23 @@ export default function Home() {
     return (
         <section id="Home">
             <nav>
-                <Button content="Question Précédente" callback={backStep} />
-                <Button content="Question Suivante" callback={nextStep} />
+                {step !== 0 && (
+                    <Button content="Question Précédente" callback={backStep} />
+                )}
+
+                {questions.length !== step + 1 ? (
+                    <Button content="Question Suivante" callback={nextStep} />
+                ) : (
+                    <Link to="/about" state={{ points: points }}>
+                        <Button content="Vers la fin (avant 3 ans)" />
+                    </Link>
+                )}
             </nav>
 
             <Player
                 autoplay
                 loop
-                src="https://assets6.lottiefiles.com/packages/lf20_kpx9c6si.json"
+                src={questions[step].animation}
                 style={{
                     height: "20vh",
                     width: "auto",
@@ -48,19 +60,22 @@ export default function Home() {
                 <ProgressBar points={points} />
             </aside>
 
+            <hr />
+
             <article>
                 {questions.length !== step ? (
                     <>
-                        <h1>{questions[step].title}</h1>
+                        <h1>
+                            {questions[step].title} / 0{questions.length}
+                        </h1>
 
-                        <p>{questions[step].text}</p>
+                        <p className="texte-question">{questions[step].text}</p>
 
                         <div id="button_container">
                             <div className="button-bien">
-                                <p>{questions[step].choice[0].text}</p>
                                 <div onClick={countPointMore}>
                                     <Button
-                                        content="Bonne réponse"
+                                        content={questions[step].choice[0].text}
                                         callback={() => setShow(true)}
                                     />
                                     {show && (
@@ -74,11 +89,13 @@ export default function Home() {
                                     )}
                                 </div>
                             </div>
+
+                            <hr />
+
                             <div className="button-pas-bien">
-                                <p>{questions[step].choice[1].text}</p>
                                 <div onClick={countPointLess}>
                                     <Button
-                                        content="Mauvaise réponse"
+                                        content={questions[step].choice[1].text}
                                         callback={() => setShow1(true)}
                                     />
                                     <Modal

@@ -1,35 +1,90 @@
+$jaune: #ffb800;
+$bleu: #003238;
+$vert: #6eeb83;
+$jaune2: #e4ff1a;
+
 #Home {
     nav {
         width: 100%;
         height: 10vh;
-        background-color: green;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+
+        @media screen and (min-width: 900px) {
+            justify-content: space-between;
+        }
     }
     // Player Lottie : height 20vh
 
     aside {
-        // margin: 3vh 0;
-        padding: 0;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    hr {
+        width: 90%;
+        height: 1px;
+        border: 2px solid $bleu;
+        margin: 30px auto;
+        background-color: $bleu;
+
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
     }
 
     article {
         width: 80%;
-        // height: 89vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
 
         h1 {
-            background-color: beige;
             width: 100%;
             text-align: center;
+
+            @media screen and (min-width: 900px) {
+                justify-content: space-between;
+            }
         }
 
-        p {
-            background-color: chocolate;
+        .texte-question {
+            text-align: center;
+            position: relative;
+            width: 95vw;
+            border: 3px solid $bleu;
+
+            @media screen and (min-width: 900px) {
+                border: none;
+                font-size: 2em;
+            }
+        }
+
+        #button_container {
+            width: 100%;
+            text-align: center;
+
+            @media screen and (min-width: 900px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .button-bien,
+            .button-pas-bien {
+                @media screen and (min-width: 900px) {
+                    width: 49%;
+                }
+            }
+
+            button {
+                width: 90%;
+                padding: 20px;
+            }
         }
     }
 
