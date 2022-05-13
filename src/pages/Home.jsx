@@ -56,25 +56,26 @@ export default function Home() {
                 }}
             ></Player>
 
-         <aside>
+            <aside>
                 <ProgressBar points={points} />
             </aside>
+
+            <hr />
 
             <article>
                 {questions.length !== step ? (
                     <>
                         <h1>
-                            {questions[step].title} / {questions.length}
+                            {questions[step].title} / 0{questions.length}
                         </h1>
 
-                        <p>{questions[step].text}</p>
+                        <p className="texte-question">{questions[step].text}</p>
 
                         <div id="button_container">
                             <div className="button-bien">
-                                <p>{questions[step].choice[0].text}</p>
                                 <div onClick={countPointMore}>
                                     <Button
-                                        content="Bonne réponse"
+                                        content={questions[step].choice[0].text}
                                         callback={() => setShow(true)}
                                     />
                                     {show && (
@@ -88,11 +89,13 @@ export default function Home() {
                                     )}
                                 </div>
                             </div>
+
+                            <hr />
+
                             <div className="button-pas-bien">
-                                <p>{questions[step].choice[1].text}</p>
                                 <div onClick={countPointLess}>
                                     <Button
-                                        content="Mauvaise réponse"
+                                        content={questions[step].choice[1].text}
                                         callback={() => setShow1(true)}
                                     />
                                     <Modal

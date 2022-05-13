@@ -1,135 +1,54 @@
-    .progress-bar-container {
-        display: flex;
-        flex-direction: row;
-       
-    }
-    // .progress-bar {
-    // position: relative;
-    // width: 70vw;
-    // height: 20px;
-    // background-color: aqua;
-    // border-radius: 50px;
-    // }
-    .barre {
-        position: relative;
-        width: 75vw;
-        height: 20px;
-    }
-    .progress-barleft {
-        position: relative;
-        left: 100%;
-        width: 100%;
-        height: 20px;
-        background-color: green;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        }
-            .progress-barright {
-            position: relative;
-            width: 50%;
-            height: 20px;
-            background-color: red;
-            border-top-left-radius: 50px;
-            border-bottom-left-radius: 50px;
-            }
-    .images {
-        height: 10rem;
-        display: flex;
-        flex-direction: row;
+.progress-bar-container {
+    display: flex;
+    position: relative;
+    width: 100%;
 
-    }
-    .mauvaises {
+    .bar {
         display: flex;
-        width: 50%;
-        justify-content: flex-start;
-        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
-    .bonnes {
-        display: flex;
-        width: 50%;
-        justify-content: flex-end;
+
+    .progress-left {
+        padding-right: 10px;
+    }
+
+    .progress-right {
+        padding-left: 10px;
     }
 
     .progress-point {
-        background-color:red;
         position: absolute;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        img {
+            width: 16vw;
+            border-radius: 50%;
+            border: 2px solid black;
+        }
     }
 
-
-#anonymous {
-    position: absolute; 
-    width: 3rem;
-     height: 3rem;
-     left: 48%;
-
-}
- #skully1 {
-    position: absolute; 
-    width: 7rem;
-     height: 7rem;
-     left: -3%;
- }
- #skully2 {
-    position: absolute; 
-    width: 5rem;
-    height: 5rem;
-    left: 7%
-
-}
-#skully3 {
-    position: absolute; 
-    width: 4rem;
-    height: 4rem;
-    left:17%
-}
-#skully4 {
-    position: absolute; 
-    width: 3rem;
-    height: 3rem;
-    left:28%
-
-}
-#skully5 {
-    position: absolute; 
-    width: 2rem;
-    height: 2rem;
-    left:39%
-
-}
- 
-#flowers1 {
-    position: absolute; 
-    width: 2rem;
-    height: 2rem;
-    left: 59%;
-}
-#flowers2 {
-    position: absolute; 
-    width: 3rem;
-    height: 3rem;
-    left: 68%;
-}
-#flowers3 {
-    position: absolute; 
-    width: 4rem;
-    height: 4rem;
-    left: 77%;
-}
-#flowers4 {
-    position: absolute; 
-    width: 5.5rem;
-    height: 5.5rem;
-    left: 86%;
-}
-#flowers5 {
-    position: absolute; 
-    width: 7rem;
-    height: 7rem;
-    left: 95%;
+    #image1 {
+        width: 12vw;
+        height: auto;
+    }
+    #image2 {
+        width: 10vw;
+        height: auto;
+    }
+    #image3 {
+        width: 8vw;
+        height: auto;
+    }
+    #image4 {
+        width: 6vw;
+        height: auto;
+    }
+    #image5 {
+        width: 4vw;
+        height: auto;
+    }
 }

@@ -18,11 +18,11 @@ export default function Modal({ step, setStep, show, setShow, choice }) {
                 <div className="overlay">
                     <div className="modal">
                         <div className="modal-content">
-                            <h2>Bien joué</h2>
-                            <p>{questions[step].choice[0].reality}</p>
                             <button onClick={change} className="close-modal">
                                 Question suivante
                             </button>
+                            <p>{questions[step].choice[0].reality}</p>
+                            <h2>Bien joué</h2>
                         </div>
                     </div>
                 </div>
@@ -31,14 +31,14 @@ export default function Modal({ step, setStep, show, setShow, choice }) {
                     <div className="overlay">
                         <div className="modal">
                             <div className="modal-content">
-                                <h2>Ah bah non</h2>
-                                <p>{questions[step].choice[1].joke}</p>
                                 <button
                                     onClick={change}
                                     className="close-modal"
                                 >
                                     Question suivante
                                 </button>
+                                <p>{questions[step].choice[1].joke}</p>
+                                <h2>Ah bah non</h2>
                             </div>
                         </div>
                     </div>
